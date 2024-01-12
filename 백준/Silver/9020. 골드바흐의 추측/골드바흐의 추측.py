@@ -10,20 +10,22 @@ def is_prime(n):
             if n % i == 0:
                 return False
         return True
+    
 
 def goldbach(num):
-    list = [0, 0]
-
-    for i in range((int(num/2)), 1, -1):
-        if is_prime(i) and is_prime(num - i):
-            list = [i, num - i]
+    num_less = int(num/2)
+    num_more = int(num/2)
+    while(True):
+        if is_prime(num_less) and is_prime(num_more):
             break
-    return list
+        num_more += 1
+        num_less -= 1 
+    return f'{num_less} {num_more}'    
 
 test_case = int(input())
 while True:
     try:
         num = int(sys.stdin.readline())
-        print(f'{goldbach(num)[0]} {goldbach(num)[1]}')
+        print(goldbach(num))
     except:
         break
