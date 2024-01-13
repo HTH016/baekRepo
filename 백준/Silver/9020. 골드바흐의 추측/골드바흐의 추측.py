@@ -13,8 +13,8 @@ def is_prime(n):
     
 
 def goldbach(num):
-    num_less = int(num/2)
-    num_more = int(num/2)
+    num_less = num//2
+    num_more = num//2
     while(True):
         if is_prime(num_less) and is_prime(num_more):
             break
