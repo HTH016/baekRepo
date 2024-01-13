@@ -1,9 +1,8 @@
 n = int(input())
-
-def factorial(n):
-    if n == 0 :
-        return 1
-    else :
-        return n * factorial(n - 1)
-
-print(factorial(n))
+result = 1
+i = n
+while i > 0:
+    result *= i
+    i -= 1
+    
+print( 1 if n == 0 else result ) 
