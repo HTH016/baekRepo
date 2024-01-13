@@ -1,0 +1,5 @@
+v = list(map(int, input().split()))
+print((v[0]+v[1])%v[2])
+print(((v[0]%v[2])+(v[1]%v[2]))%v[2])
+print((v[0]*v[1])%v[2])
+print(((v[0]%v[2])*(v[1]%v[2]))%v[2])
