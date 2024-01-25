@@ -1,5 +1,4 @@
 import sys
-from collections import deque
 
 size, vir_num = map(int, input().split())
 lab = [list(map(int, sys.stdin.readline().split())) for i in range(size)]
