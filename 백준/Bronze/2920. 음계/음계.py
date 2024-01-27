@@ -1,15 +1,8 @@
 num_list = list(map(int, input().split()))
-cnt_1 = 0
-cnt_2 = 0
-for i in range(1, 9):
-    if i == num_list[i - 1]:
-        cnt_1 += 1
-    if i + num_list[i - 1] == 9:
-        cnt_2 += 1
-    
-if cnt_1 == 8:
+
+if num_list == [1, 2, 3, 4, 5, 6, 7, 8]:
     print('ascending')
-elif cnt_2 == 8:
+elif num_list == [8, 7, 6, 5, 4, 3, 2, 1]:
     print('descending')
 else:
     print('mixed')
